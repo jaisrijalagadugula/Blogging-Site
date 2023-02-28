@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}">
+    <title>New Post</title>
+</head>
+<body>
+    <div class="container">
+        <a href="/myblog">Back</a>
+    <h1>New Post</h1>
+        <form action="/newpostdb" method="post">
+            <label for="topic">Topic:</label>
+            <input type="text" name="topic" id="topic" placeholder="Enter Topic">
+            <br>
+            <label for="content">Content:</label>
+            <textarea name="content" id="content" rows="10" cols="80" placeholder="Enter Content"></textarea>
+            <br>
+            <input type="submit" value="POST">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+body, html {
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  a{text-decoration: none;
+    color: whitesmoke;}
+body {
+    background-image: url("./images/homebg.webp");
+    min-height: 580px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: whitesmoke;
+  }
+  .container {
+    float: left;
+    margin-top: 50px;
+    padding: 16px;
+    max-width: 400px;
+    padding-top: 0px;
+    background-color:transparent;
+    height: 350px;
+  }
+  img{
+    height: 400px;
+    float: right;
+  }
+  .bg-img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border:1px solid whitesmoke;
+    background: whitesmoke;
+    font-size: 18px;
+  }
+  label{
+    font-size: 22px;
+    font-family:'Courier New', Courier, monospace;
+  }
+  h1{font-size: 32px;
+    text-align: center;
+font-weight: bolder;
+}
+input::placeholder{
+  font-size: 16px;
+  font-style: oblique;
+  background: transparent;
+}
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: whitesmoke;
+    outline: none;
+  }
+  .btn {
+      background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    color: rgb(0, 0, 0);
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    height: 15%;
+    width: 35%;
+    opacity: 0.8;
+    font-size: 22px;
+    font-family:'Courier New', Courier, monospace ;
+    font-weight: bolder;
+    margin-left: 30%;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
+  .navbar {
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    gap: 15px;
+    position: sticky;
+    width: auto;
+    margin-left: 15%;
+    margin-top: 25px;
+  } 
+  
+  li{
+    display: inline;
+    margin: 10px;
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }

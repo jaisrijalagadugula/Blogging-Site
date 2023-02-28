@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Blog</title>
+  <link rel="stylesheet" href="../static/home.css">
+ </head>
+
+<body>
+  <header>
+    <div class="container">
+
+      <nav class="navbar">
+
+        <div class="flex-wrapper">
+
+          <ul class="desktop-nav">
+
+            {% if data =="" %}
+            
+            <li>
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="/register" class="nav-link">Signup</a>
+            </li>
+
+            <li>
+              <a href="/login" class="nav-link">Login</a>
+            </li>
+          </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+  
+    <div class="hero">
+          <h1 class="h1">
+            <b>Blog&nbsp;Writing</b>
+          </h1>
+          <p class="para">A blog, also known as weblog, is a type of website that is like a diary or journal. Blog organizes content in the form of categories and posts Blogging refers to writing, photography, and other media that's self-published online. Blogging started as an opportunity for individuals to write diary-style entries, but it has since been incorporated into websites for many businesses.Blogging is as simple as obtaining a website and publishing original content on it. Tech-savvy bloggers can buy a domain name and build the website themselves.Blog' and 'blogging' are now loosely used for content creation and sharing on social media, especially when the content is long-form and one creates and shares content on regular basis. So, one could be maintaining a blog on Facebook or blogging on Instagram.Early blogs were simply manually updated components of common Websites. In 1995, the "Online Diary" on the Ty, Inc. Web site was produced and updated manually before any blogging programs were available. Posts were made to appear in reverse chronological order by manually updating text-based HTML code using FTP software in real time several times a day. To users, this offered the appearance of a live diary that contained multiple new entries per day. At the beginning of each new day, new diary entries were manually coded into a new HTML file, and at the start of each month, diary entries were archived into their own folder, which contained a separate HTML page for every day of the month. Then, menus that contained links to the most recent diary entry were updated manually throughout the site. This text-based method of organizing thousands of files served as a springboard to define future blogging styles that were captured by blogging software developed years later.The evolution of electronic and software tools to facilitate the production and maintenance of Web articles posted in reverse chronological order made the publishing process feasible for a much larger and less technically-inclined population. Ultimately, this resulted in the distinct class of online publishing that produces blogs we recognize today. For instance, the use of some sort of browser-based software is now a typical aspect of "blogging". Blogs can be hosted by dedicated blog hosting services, on regular web hosting services, or run using blog software</p>        </div>
+            {% else %}
+              <li>Hello, {{ data }}</li>
+              <li>
+                <a href="/myblog" class="nav-link">My Blogs</a>
+              </li>
+            <li>
+              <a href="/logout" class="nav-link">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+  </div>
+
+  <div class="content">
+          <div class="blog-card-group">
+            {% for k in blogs %}
+
+            <div class="blog-card">
+                <h1>{{k['Topic']}}</h1>
+                <p class="blog-text">{{k["Content"]}}</p>
+                <h5>Posted By:</h5><h4>{{k['Author']}}</h4>
+                <p class="text-sm">
+                  <time datetime="2022-01-17">{{k['Date']}}</time>
+                </p>
+            </div>
+            {% endfor %}
+          </div>
+          
+   </div>
+    </div>
+
+  </main>
+
+  {% endif %}
+</body>
+
+</html>
